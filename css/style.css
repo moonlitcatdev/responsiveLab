@@ -1,0 +1,217 @@
+html {
+    scroll-snap-type: smooth;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(114, 172, 153);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: fixed;
+}
+
+#sitelogo, #burgerIcon, #top {
+    display: block;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+}
+
+#sitelogo {
+    background-color: rgb(241, 231, 214);
+    margin-left: 30px;
+}
+
+#burgerIcon {
+    margin-right: 30px;
+}
+
+header > nav {
+    display: none;
+}
+
+/* @media only screen and () to use like rotating phone landscape */
+@media only screen and (min-width:650px){
+    #burgerIcon {
+        display: none;
+    }
+    header > nav{
+        display: flex;
+        gap: 20px;
+    }
+
+    header > nav > a {
+        font-family: "Barlow", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        text-decoration: none;
+        color: rgb(241, 231, 214);
+        text-transform: uppercase;
+        scroll-behavior: smooth;
+    }
+}
+
+section {
+    width: 100%;
+    scroll-margin-top: 70px;
+}
+
+#NewR, #Popular, #Throwbacks {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+#NewR {
+    padding-top: 90px;
+    scroll-margin-top: 90px;
+}
+
+#NewR > h1, #Popular > h1, #Throwbacks > h1 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: -20px;
+    background: -webkit-linear-gradient(rgb(200, 196, 206),rgb(219, 187, 123));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    border-bottom: 1px solid rgb(114, 172, 153);
+    line-height: 75px;
+}
+
+#NewR > div, #Popular > div, #Throwbacks > div {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.nrItem, .popItem, .tbItem {
+    width: 145px;
+    height: 280px;
+    background-color: rgb(237, 237, 237);
+    border-radius: 5px;
+    flex-basis: calc(50% - 10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nrItem > img, .popItem > img, .tbItem > img {
+    width: 120px;
+    height: 120px;
+    background-color: rgb(196, 196, 196);
+}
+
+.nrItem > h2, .popItem > h2, .tbItem > h2 {
+    font-family: "Quicksand", sans-serif;
+    font-size: 11px;
+    color: rgb(99, 99, 99);
+    text-transform: uppercase;
+    width: 80%;
+    text-align: center;
+    margin-bottom: -5px;
+}
+
+.nrItem > h3, .popItem > h3, .tbItem > h3 {
+    font-family: "Barlow", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 10px;
+    color: rgb(99, 99, 99);
+    text-transform: uppercase;
+    text-align: center;
+    width: 90%;
+    margin-bottom: -6px;
+}
+
+#NewR > h6, #Popular > h6, #Throwbacks > h6 {
+    font-family: "Barlow", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    color: rgb(99, 99, 99);
+    text-align: center;
+    width: 90%;
+}
+
+.nrItem > button, .popItem > button, .tbItem > button {
+    width: 105px;
+    height: 30px;
+    border: none;
+    background-color: rgb(114, 172, 153);
+    border-radius: 12px;
+    color: white;
+}
+
+@media only screen and (min-width:650px) {
+    #NewR > div, #Popular > div, #Throwbacks > div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-height: none;
+        overflow: hidden;
+    }
+    .nrItem, .popItem, .tbItem {
+        flex: 1 1 calc(33.33% - 20px); 
+        width: calc(33.33% - 20px);
+        height: 300px;
+    }
+    .nrItem > h3, .popItem > h3, .tbItem > h3 {
+        font-family: "Barlow", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 10px;
+        color: rgb(99, 99, 99);
+        text-transform: uppercase;
+        width: 70%;
+    }
+    .nrItem > img, .popItem > img, .tbItem > img {
+        width: 150px;
+        height: 150px;
+        background-color: rgb(196, 196, 196);
+    }
+}
+
+#contact {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(114, 172, 153);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contact > p {
+    margin-left: 30px;
+}
+
+#contact > a {
+    margin-right: 30px;
+}
+
+#contact a img {
+    width: 24px; 
+    height: 24px;
+}
+
+footer > p {
+    font-family: "Barlow", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    color: rgb(241, 231, 214);
+}
